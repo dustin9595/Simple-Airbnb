@@ -1,0 +1,24 @@
+
+<div class="background" style ="background-image: url('<%= @flat.url %>')">
+  <div class="container-show">
+    <div class="main-boxes">
+      <div class="header-box">
+        <h1 class="headline-big"><%= @flat.name %></h1>
+        <h3 class="subheadline-big"><%= @flat.address %></h2>
+      </div>
+      <div class="description">
+        <h2 class="intro">A bit more about this flat...</h2>
+        <p class="description-text"> <%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="side-box">
+      <div class="details">
+        <h4 class="details-headline">Details</h4>
+        <div class="detail-numbers">
+          <p class="number-guests"> <%= @flat.number_of_guests %></p>
+          <p class="price-night"> <%= @flat.price_per_night %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

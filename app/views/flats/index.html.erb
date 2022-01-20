@@ -1,0 +1,29 @@
+
+<div class="container">
+  <h1 class="headline"><%= "All flats (#{@flats.count})" %></h1>
+  <div class="boxes">
+  <% @flats.each do |flat| %>
+  <div >
+    <div class="box">
+      <div class="image" style ="background-image: url('<%= flat.url %>')">
+      </div>
+      <div class="upper-box">
+        <h2 class="small-headline"><%= flat.name %></h2>
+        <p class="subheadline"><%= flat.address %></p>
+        <div class="price-number">
+          <p class="number"><%= flat.price_per_night %></p>
+          <p class="number"><%= flat.number_of_guests %></p>
+        </div>
+      </div>
+      <div class="lower-box">
+        <div class="links">
+          <%= link_to "More info", flat_path(flat), class: "link-blue" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "link-yellow" %>
+          <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" }, class: "link-red" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>
